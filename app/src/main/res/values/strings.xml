@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">AulaAndroid</string>
+    <string name="meuProjeto">Curso Android</string>
+    <string name="bntSair">Sair</string>
+    <string name="bntVoltar">Voltar</string>
+    <string name="nome_do_cliente">Nome do Cliente:</string>
+    <string name="cadastro_do_cliente">Cadastro do Cliente</string>
+    <string name="nome_completo">Nome Completo</string>
+    <string name="cidade">Cidade</string>
+    <string name="uf">UF</string>
+    <string name="profissao">Profissão</string>
+    <string name="empresa">Empresa</string>
+    <string name="telefone">Telefone</string>
+    <string name="e_mail">E-mail</string>
+    <string name="salvar">Salvar</string>
+    <string name="limpar">Limpar</string>
 </resources>
