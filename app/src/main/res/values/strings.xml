@@ -1,17 +1,20 @@
 <resources>
-    <string name="app_name">AulaAndroid</string>
-    <string name="meuProjeto">Curso Android</string>
-    <string name="bntSair">Sair</string>
-    <string name="bntVoltar">Voltar</string>
-    <string name="nome_do_cliente">Nome do Cliente:</string>
-    <string name="cadastro_do_cliente">Cadastro do Cliente</string>
-    <string name="nome_completo">Nome Completo</string>
-    <string name="cidade">Cidade</string>
-    <string name="uf">UF</string>
-    <string name="profissao">Profissão</string>
-    <string name="empresa">Empresa</string>
-    <string name="telefone">Telefone</string>
-    <string name="e_mail">E-mail</string>
-    <string name="salvar">Salvar</string>
-    <string name="limpar">Limpar</string>
+    <string name="app_name">Semana01 Aula 04 Eventos Button</string>
+
+    <string name="btnVoltar">Voltar</string>
+    <string name="btnSair">Sair</string>
+
+    <string name="meuProjeto">Curso Android 2016</string>
+
+    <string name="txtTitulo">Cadastro do Cliente</string>
+    <string name="txtNome">Nome Completo</string>
+    <string name="txtCidade">Cidade</string>
+    <string name="txtUF">UF</string>
+    <string name="txtProfissao">Profissão</string>
+    <string name="txtEmpresa">Nome da Empresa</string>
+    <string name="txtTelefone">Telefone</string>
+    <string name="txtEmail">E-mail</string>
+    <string name="btnSalvar">Salvar</string>
+    <string name="btnLimpar">Limpar</string>
+
 </resources>
