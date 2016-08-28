@@ -1,4 +1,4 @@
-package rbaselio.com.br.aulaandroid;
+package rbaselio.com.br.aulaandroid.model;
 
 
 public class Cliente {
@@ -67,6 +67,7 @@ public class Cliente {
     public void setEmail(String email) {
         this.email = email;
     }
+
 
     public Cliente(String nome, String cidade, String uf, String profissao, String empresa, String telefone, String email) {
         this.nome = nome;

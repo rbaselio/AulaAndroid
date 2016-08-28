@@ -8,6 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import rbaselio.com.br.aulaandroid.controller.ClienteController;
+import rbaselio.com.br.aulaandroid.model.ClienteBuilder;
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -22,12 +25,13 @@ public class MainActivity extends AppCompatActivity {
     private EditText editTelefone;
     private EditText editEmail;
 
-    private Cliente objCliente;
+
+    private ClienteController clienteController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.linear_layout_solucao);
+        setContentView(R.layout.activity_main);
 
         btnSalvar = (Button) findViewById(R.id.btnSalvar);
         btnLimpar = (Button) findViewById(R.id.btnLimpar);
@@ -41,18 +45,21 @@ public class MainActivity extends AppCompatActivity {
         editEmail = (EditText)  findViewById(R.id.editEmail);
 
 
+        clienteController = new ClienteController();
+
+
         btnSalvar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-            criaCliente();
-            Toast.makeText(getApplicationContext(), objCliente.toString(), Toast.LENGTH_SHORT).show();
+            salvaCliente();
+            Toast.makeText(getApplicationContext(), clienteController.toString(), Toast.LENGTH_SHORT).show();
             }
         });
 
         btnLimpar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-            limpar((ViewGroup)findViewById(R.id.formulario));
+            limparCliente((ViewGroup)findViewById(R.id.formulario));
             Toast.makeText(getApplicationContext(), "Formulario limpo", Toast.LENGTH_SHORT).show();
             }
         });
@@ -61,19 +68,21 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void criaCliente(){
-        objCliente = new ClienteBuilder().setNome(editNome.getText().toString())
-                                        .setCidade(editCidade.getText().toString())
-                                        .setEmail(editEmail.getText().toString())
-                                        .setEmpresa(editEmpresa.getText().toString())
-                                        .setProfissao(editProfissao.getText().toString())
-                                        .setTelefone(editTelefone.getText().toString())
-                                        .setUf(editUF.getText().toString())
-                                        .createCliente();
+    private void salvaCliente(){
+        clienteController.salvarCliente(new ClienteBuilder()
+                                            .setNome(editNome.getText().toString())
+                                            .setCidade(editCidade.getText().toString())
+                                            .setEmail(editEmail.getText().toString())
+                                            .setEmpresa(editEmpresa.getText().toString())
+                                            .setProfissao(editProfissao.getText().toString())
+                                            .setTelefone(editTelefone.getText().toString())
+                                            .setUf(editUF.getText().toString())
+                                            .createCliente()
+                                        );
     }
 
-    public void limpar(ViewGroup group) {
-        objCliente = null;
+    public void limparCliente(ViewGroup group) {
+        clienteController.limparCliente();
         int count = group.getChildCount();
         for (int i = 0; i < count; i++) {
             View view = group.getChildAt(i);
@@ -81,5 +90,6 @@ public class MainActivity extends AppCompatActivity {
                 ((EditText)view).setText("");
             }
         }
+        editNome.requestFocus();
     }
 }

@@ -1,6 +1,4 @@
-package rbaselio.com.br.aulaandroid;
-
-import android.text.Editable;
+package rbaselio.com.br.aulaandroid.model;
 
 public class ClienteBuilder {
     private String nome;
