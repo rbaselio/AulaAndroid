@@ -1,4 +1,4 @@
-package rbaselio.com.br.aulaandroid;
+package rbaselio.com.br.aulaandroid.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import rbaselio.com.br.aulaandroid.R;
 import rbaselio.com.br.aulaandroid.controller.ClienteController;
 import rbaselio.com.br.aulaandroid.model.ClienteBuilder;
 
