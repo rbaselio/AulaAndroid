@@ -68,27 +68,15 @@ public class Cliente {
         this.email = email;
     }
 
-
-    public Cliente(String nome, String cidade, String uf, String profissao, String empresa, String telefone, String email) {
-        this.nome = nome;
-        this.cidade = cidade;
-        this.uf = uf;
-        this.profissao = profissao;
-        this.empresa = empresa;
-        this.telefone = telefone;
-        this.email = email;
-    }
-
     @Override
     public String toString() {
-        return "Cliente{" +
-                "nome='" + nome + '\n' +
-                ", cidade='" + cidade + '\n' +
-                ", uf='" + uf + '\n' +
-                ", profissao='" + profissao + '\n' +
-                ", empresa='" + empresa + '\n' +
-                ", telefone='" + telefone + '\n' +
-                ", email='" + email + '\n' +
-                '}';
+        return "Cliente: \n\n" +
+                "Nome='" + nome + "\n;" +
+                "Cidade='" + cidade + "'\n;" +
+                "UF='" + uf + "\n;"+
+                "Profissao='" + profissao + "\n;"+
+                "Empresa='" + empresa + "\n;"+
+                "Telefone='" + telefone + "\n;"+
+                "Email='" + email + "\n;";
     }
 }

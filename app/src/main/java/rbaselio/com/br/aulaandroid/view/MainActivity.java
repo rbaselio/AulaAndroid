@@ -8,9 +8,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.HashMap;
+
 import rbaselio.com.br.aulaandroid.R;
 import rbaselio.com.br.aulaandroid.controller.ClienteController;
-import rbaselio.com.br.aulaandroid.model.ClienteBuilder;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText editEmail;
 
 
-    private ClienteController clienteController;
+    private ClienteController clienteController = new ClienteController();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +47,6 @@ public class MainActivity extends AppCompatActivity {
         editTelefone = (EditText)  findViewById(R.id.editTelefone);
         editEmail = (EditText)  findViewById(R.id.editEmail);
 
-
-        clienteController = new ClienteController();
 
 
         btnSalvar.setOnClickListener(new View.OnClickListener(){
@@ -70,16 +70,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void salvaCliente(){
-        clienteController.salvarCliente(new ClienteBuilder()
-                                            .setNome(editNome.getText().toString())
-                                            .setCidade(editCidade.getText().toString())
-                                            .setEmail(editEmail.getText().toString())
-                                            .setEmpresa(editEmpresa.getText().toString())
-                                            .setProfissao(editProfissao.getText().toString())
-                                            .setTelefone(editTelefone.getText().toString())
-                                            .setUf(editUF.getText().toString())
-                                            .createCliente()
-                                        );
+        HashMap<String, EditText> myMap = new HashMap<String, EditText>();
+        myMap.put("editNome", editNome);
+        myMap.put("editCidade", editCidade);
+        myMap.put("editUF", editUF);
+        myMap.put("editProfissao", editProfissao);
+        myMap.put("editEmpresa", editEmpresa);
+        myMap.put("editTelefone", editTelefone);
+        myMap.put("editEmail", editEmail);
+
+        clienteController.salvarCliente(myMap);
     }
 
     public void limparCliente(ViewGroup group) {
@@ -93,4 +93,7 @@ public class MainActivity extends AppCompatActivity {
         }
         editNome.requestFocus();
     }
+
+
+
 }
