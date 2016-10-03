@@ -18,5 +18,10 @@
     <string name="btnSalvar">Salvar</string>
     <string name="btnLimpar">Limpar</string>
     <string name="title_activity_splash">SplashActivity</string>
+    <string name="dash">Dashboard</string>
+    <string name="bntTitulo">Consultar Clientes</string>
+    <string name="btnAdicionar">Adicinar Clientes</string>
+    <string name="btnAlterar">Alterar Clientes</string>
+    <string name="btnDeletar">Deletar Clientes</string>
 
 </resources>
