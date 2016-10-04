@@ -30,7 +30,7 @@ public class ClienteController {
     }
 
     public void salvarCliente(HashMap<String, EditText> myMap) {
-        if (this.cliente == null) cliente = new Cliente();
+        if (this.cliente == null) cliente = new Cliente("");
 
         cliente.setNome(myMap.get("editNome").getText().toString());
         cliente.setCidade(myMap.get("editCidade").getText().toString());

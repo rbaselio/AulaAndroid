@@ -11,6 +11,10 @@ public class Cliente {
     private String telefone;
     private String email;
 
+    public Cliente (String nome){
+        this.nome = nome;
+    }
+
 
     public String getNome() {
         return nome;

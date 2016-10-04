@@ -18,7 +18,8 @@
         <activity
             android:name=".view.MainActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".view.DashboardActivity"/>
+        <activity android:name=".view.DashboardActivity" />
+        <activity android:name=".view.ConsultarClienteActivity"></activity>
     </application>
 
 </manifest>

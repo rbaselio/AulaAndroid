@@ -1,9 +1,12 @@
 package rbaselio.com.br.aulaandroid.view;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 
 import rbaselio.com.br.aulaandroid.R;
@@ -11,6 +14,7 @@ import rbaselio.com.br.aulaandroid.R;
 public class DashboardActivity extends AppCompatActivity {
     private final String TAG= "DASHBOARD";
     RelativeLayout dashboard;
+    private Button btnConsultar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +22,16 @@ public class DashboardActivity extends AppCompatActivity {
         Log.e(TAG,"onCreate-------"+this.getClass().getSimpleName());
         setContentView(R.layout.activity_dashboard);
         dashboard = (RelativeLayout) findViewById(R.id.activity_dashboard) ;
+
+        btnConsultar = (Button) findViewById(R.id.btnConsultar);
+        btnConsultar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent consultarClientes = new Intent(DashboardActivity.this, ConsultarClienteActivity.class);
+                startActivity(consultarClientes);
+                finish();
+            }
+        });
     }
 
     @Override
