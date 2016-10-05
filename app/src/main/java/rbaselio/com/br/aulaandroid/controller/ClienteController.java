@@ -3,12 +3,19 @@ package rbaselio.com.br.aulaandroid.controller;
 import android.widget.EditText;
 
 import java.util.HashMap;
+import java.util.List;
 
+import rbaselio.com.br.aulaandroid.dataSouce.DataSource;
 import rbaselio.com.br.aulaandroid.model.Cliente;
 
 
-public class ClienteController {
+public class ClienteController{
     private Cliente cliente;
+    private DataSource ds;
+
+    public ClienteController(){
+        ds = new DataSource();
+    }
 
 
 
@@ -40,5 +47,11 @@ public class ClienteController {
         cliente.setTelefone(myMap.get("editTelefone").getText().toString());
         cliente.setUf(myMap.get("editEmail").getText().toString());
 
+
+        ds.persistirDados(cliente);
+    }
+
+    public List<String> listarDados(){
+        return ds.listarCLientes();
     }
 }

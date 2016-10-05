@@ -5,14 +5,10 @@ import java.util.List;
 
 import rbaselio.com.br.aulaandroid.model.Cliente;
 
-/**
- * Created by roberto on 04/10/16.
- */
 
 public class DataSource {
     
-    public boolean persistirDados(){
-        // TODO: 04/10/16 adiconar e alterar registros
+    public boolean persistirDados(Cliente cliente){
         return true;
     }
 

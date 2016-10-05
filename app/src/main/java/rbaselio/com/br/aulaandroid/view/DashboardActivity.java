@@ -15,6 +15,8 @@ public class DashboardActivity extends AppCompatActivity {
     private final String TAG= "DASHBOARD";
     RelativeLayout dashboard;
     private Button btnConsultar;
+    private Button btnAdiconar;
+    private Button btnSair;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,23 @@ public class DashboardActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        btnAdiconar = (Button) findViewById(R.id.btnAdicionar);
+        btnAdiconar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DashboardActivity.this, AdiconarClienteActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnSair = (Button) findViewById(R.id.btnSair);
+        btnSair.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
     }
 
     @Override

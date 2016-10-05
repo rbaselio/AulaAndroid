@@ -9,17 +9,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".view.SplashActivity">
-            <intent-filter>
+            <intent-filter android:label="@string/app_name">
+
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
+
+
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.MainActivity"
+            android:name=".view.AdiconarClienteActivity"
             android:theme="@style/AppTheme" />
         <activity android:name=".view.DashboardActivity" />
-        <activity android:name=".view.ConsultarClienteActivity"></activity>
+        <activity android:name=".view.ConsultarClienteActivity"/>
     </application>
 
 </manifest>

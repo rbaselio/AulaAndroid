@@ -14,7 +14,7 @@ import java.util.HashMap;
 import rbaselio.com.br.aulaandroid.R;
 import rbaselio.com.br.aulaandroid.controller.ClienteController;
 
-public class MainActivity extends AppCompatActivity {
+public class AdiconarClienteActivity extends AppCompatActivity {
     private final String TAG= "MAIN";
 
     private Button btnSalvar;
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void salvaCliente(){
-        HashMap<String, EditText> myMap = new HashMap<String, EditText>();
+        HashMap<String, EditText> myMap = new HashMap<>();
         myMap.put("editNome", editNome);
         myMap.put("editCidade", editCidade);
         myMap.put("editUF", editUF);
